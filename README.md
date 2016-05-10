@@ -1,10 +1,31 @@
 # ActiveError
 
+[![Gem Version](https://badge.fury.io/rb/active_error.svg)](https://badge.fury.io/rb/active_error)
+[![Build Status](https://travis-ci.org/JuanitoFatas/active_error.svg?branch=master)](https://travis-ci.org/JuanitoFatas/active_error)
+
 ## Usage
 
 ```ruby
 ActiveError.new(StandardError, "error message")
+ActiveError.new(StandardError, "error message", backtrace: caller)
 ```
+
+## Why
+
+Fixing this common pattern:
+
+```ruby
+exception = StandardError.new("error message")
+exception.set_backtrace(caller)
+```
+
+Should be in one-step:
+
+```
+ActiveError.new(StandardError, "error message", backtrace: caller)
+```
+
+Enjoy :tada:
 
 ## Installation
 
