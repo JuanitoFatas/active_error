@@ -10,6 +10,10 @@ Easily create an exception with backtrace.
 ```ruby
 ActiveError.new(StandardError, "error message")
 ActiveError.new(StandardError, "error message", backtrace: caller)
+
+# default error class is StandardError
+ActiveError.new("error message")
+ActiveError.new("error message", backtrace: caller)
 ```
 
 ## Why
