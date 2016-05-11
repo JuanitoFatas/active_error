@@ -6,7 +6,7 @@ RSpec.describe ActiveError do
   end
 
   describe ".new" do
-    context 'error class is given' do
+    context "error class is given" do
       it "create an exception with message" do
         exception = ActiveError.new(StandardError, "failed lor")
 
@@ -20,21 +20,21 @@ RSpec.describe ActiveError do
       end
     end
 
-    context 'error class is not given' do
-      it 'defaults to StandardError' do
-        exception = ActiveError.new('failed lor')
+    context "error class is not given" do
+      it "defaults to StandardError" do
+        exception = ActiveError.new("failed lor")
 
         expect(exception).to be_instance_of StandardError
       end
 
-      it 'accepts message as first argument' do
-        exception = ActiveError.new('failed lor')
+      it "accepts message as first argument" do
+        exception = ActiveError.new("failed lor")
 
-        expect(exception.message).to eq 'failed lor'
+        expect(exception.message).to eq "failed lor"
       end
 
-      it 'accepts backtrace as second argument' do
-        exception = ActiveError.new('failed lor', backtrace: %w(1 2 3))
+      it "accepts backtrace as second argument" do
+        exception = ActiveError.new("failed lor", backtrace: %w(1 2 3))
 
         expect(exception.backtrace).to eq %w(1 2 3)
       end
