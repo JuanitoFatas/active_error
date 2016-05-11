@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %(Create an exception has never been easier in Ruby!)
   spec.description   = spec.summary
-  spec.homepage      = "https://github.com/JuanitoFata/active_error"
+  spec.homepage      = "https://github.com/JuanitoFatas/active_error"
   spec.license       = "Apache 2.0"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
